@@ -1,3 +1,16 @@
+def fatorial_rec(n:int) ->int:
+        '''
+        Algoritimo recursivo para resolver fatorial 
+        input:
+        n:int - Um valor inteiro qualquer >0
+        output :
+         result  - um valor  inteiro >0
+        '''
+        if n <= 1:
+                return 1
+        else :
+                return n * fatorial_rec(n-1)
+
 def fatorial (n:int)->int:
         '''
         algoritimo interativo para fatorial                   
@@ -25,7 +38,8 @@ def fatorial (n:int)->int:
 try:
  n = int(input('Digite um numero:'))
  print( n + 2)
- print(fatorial(n))
+ print(f'Resultado iterativo:{fatorial(n)}')
+ print(f'Resultado recursivo:{fatorial_rec(n)}')
 except :
  print ('Insersão errada')
 n = int(input('Digite um numero:'))
